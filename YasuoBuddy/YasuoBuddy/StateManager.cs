@@ -45,12 +45,12 @@ namespace YasuoBuddy
                 }
             }
 
-            if (Yasuo.ComboMenu["combo.E"].Cast<CheckBox>().CurrentValue && target.GetDashPos().Distance(target) < 400 && target.CanDash() && target.Distance(Player.Instance) > Player.Instance.GetAutoAttackRange(target))
+            if (Yasuo.ComboMenu["combo.E"].Cast<CheckBox>().CurrentValue && target.GetDashPos().Distance(target) < 400 && target.CanDash())
             {
                 SpellManager.E.Cast(target);
             }
 
-            if (Yasuo.ComboMenu["combo.E"].Cast<CheckBox>().CurrentValue && target.Distance(Player.Instance) > Player.Instance.GetAutoAttackRange(target) && !Player.Instance.IsDashing())
+            if (Yasuo.ComboMenu["combo.E"].Cast<CheckBox>().CurrentValue && !Player.Instance.IsDashing())
             {
                 foreach (var unit in EntityManager.MinionsAndMonsters.CombinedAttackable)
                 {
