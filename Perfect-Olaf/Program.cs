@@ -337,7 +337,7 @@ namespace Perfect_Olaf
             var useRCustom = ComboMenu["RComboCustom"].Cast<CheckBox>().CurrentValue;
             var useItem = ComboMenu["useTiamat"].Cast<CheckBox>().CurrentValue;
 
-            if (useQ && Q.IsReady() && Q.GetPrediction(target).HitChance >= HitChance.Medium && !target.IsDead && !target.IsZombie)
+            if (useQ && Q.IsReady() && Q.GetPrediction(target).HitChance >= HitChance.High && !target.IsDead && !target.IsZombie)
             {
                 Q.Cast(Q.GetPrediction(target).CastPosition);
             }
